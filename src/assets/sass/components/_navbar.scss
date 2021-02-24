@@ -1,0 +1,126 @@
+// NAVBAR
+.navbar {
+  background-color: black;
+
+  &__container {
+    margin: 0 5rem;
+    height: 100%;
+    // width: 90%;
+    min-height: 8rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    // background-color: red;
+    margin-right: 2rem;
+  }
+
+  &__search {
+    background-color: orange;
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__search input {
+    height: 2.75rem;
+    width: 21rem;
+    background-color: $color-grey-light-1;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    text-indent: 1rem;
+
+    &::placeholder {
+      color: $color-grey-light-4;
+    }
+
+    &:focus {
+      background-color: $color-grey-light-3;
+    }
+  }
+
+  &__search-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: -2.5rem;
+
+    &:focus {
+      outline: none;
+    }
+    &:active{
+      transform: translateY(2px);
+    }
+  }
+
+  &__search-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: $color-grey-dark-3;
+  }
+
+  &__links-wrap {
+    // background-color: yellowgreen;
+    list-style-type: none;
+    margin-right: 2rem;
+
+    & > * {
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 1rem;
+      
+    }
+  }
+
+  &__links-item {
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+
+    & a:hover {
+      color: $color-grey-light-4;
+    }
+  }
+
+  &__auth-wrap {
+    // background-color: lightskyblue;
+    display: flex;
+    list-style-type: none;
+    & > * {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .2s ease-in;
+      
+    }
+
+    & > li:not(:last-child) {
+      margin-right: .5rem;
+      
+    }
+     & a:hover {
+      color: $color-grey-light-4;
+      transition: all .2s ease-in;
+    }
+  }
+
+  &__auth-item {
+    & a {
+      text-decoration: none;
+      color: white;
+      padding: 5px;
+    }
+  }
+
+  &__auth-icon {
+    height: 1rem;
+    width: 1rem;
+    fill: white;
+  }
+}
