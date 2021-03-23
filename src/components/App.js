@@ -1,19 +1,22 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
-import { init } from '../reducers';
-import Header from './Header';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomeContainer from '../containers/HomeContainer';
+import NavbarContainer from '../containers/NavbarContainer';
+import Login from './Login';
+import Register from './Register';
 
 
-const store = init();
 
 const App = () => {
 	return (
-		<Provider store={store}>
 			<BrowserRouter>
-				<Header />
+				<NavbarContainer />
+				<div>
+					<Route exact path='/' component={HomeContainer} />
+					<Route exact path='/login' component={Login} />
+					<Route exact path='/register' component={Register} />
+				</div>
 			</BrowserRouter>
-		</Provider>
 	);
 };
 

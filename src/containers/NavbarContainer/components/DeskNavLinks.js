@@ -1,18 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import sprites from '../../assets/img/sprites.svg';
+import { NavLink } from 'react-router-dom';
+import sprites from '../../../assets/img/sprites.svg';
 
-const Navlinks = () => {
+const DeskNavlinks = () => {
+  console.count('Desktop')
 	return (
 		<div className='navbar__user-area'>
 			<ul className='navbar__links-wrap'>
 				<li className='navbar__links-item'>
-					<Link to='/'>Home</Link>
+					<NavLink exact activeClassName='active' to='/'>
+						Home
+					</NavLink>
 				</li>
 			</ul>
 			<ul className='navbar__auth-wrap'>
 				<li className='navbar__auth-item'>
-					<Link to='/login'>Login</Link>
+					<NavLink exact activeClassName='active' to='/login'>
+						Login
+					</NavLink>
 				</li>
 				<li>
 					<svg className='navbar__auth-icon'>
@@ -20,11 +25,13 @@ const Navlinks = () => {
 					</svg>
 				</li>
 				<li className='navbar__auth-item'>
-					<Link to='/register'>Register</Link>
+					<NavLink exact activeClassName='active' to='/register'>
+						Register
+					</NavLink>
 				</li>
 			</ul>
 		</div>
 	);
 };
 
-export default Navlinks;
+export default DeskNavlinks;

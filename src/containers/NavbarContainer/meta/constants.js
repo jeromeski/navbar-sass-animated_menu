@@ -1,0 +1,3 @@
+export const IS_BARS_SELECTED = 'IS_BARS_SELECTED';
+export const IS_BARS_SHOWN = 'IS_BARS_SHOWN';
+export const IS_USER_MENU_ACTIVE = 'IS_USER_MENU_ACTIVE';
